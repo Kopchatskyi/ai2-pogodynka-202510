@@ -1,0 +1,38 @@
+App\Entity\Location:
+    properties:
+        city:
+            - NotBlank: ~
+            - Length:
+                  min: 3
+                  max: 255
+        latitude:
+            - NotBlank: ~
+            - Range:
+                  min: -90
+                  max: 90
+        longitude:
+            - NotBlank: ~
+            - Range:
+                  min: -180
+                  max: 180
+
+App\Entity\Forecast:
+    properties:
+        celsius:
+            - NotBlank: ~
+            - Range:
+                  min: -100
+                  max: 100
+        humidity:
+            - NotBlank: ~
+            - Range:
+                  min: 0
+                  max: 100
+        feels_like:
+            - NotBlank: ~
+            - Range:
+                  min: -100
+                  max: 100
+        date:
+            - NotBlank: ~
+            - Type: \DateTime
