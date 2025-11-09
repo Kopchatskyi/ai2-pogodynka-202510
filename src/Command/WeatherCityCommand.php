@@ -20,7 +20,6 @@ class WeatherCityCommand extends Command
     private LocationRepository $locationRepository;
     private WeatherUtil $weatherUtil;
 
-    // Wstrzykiwanie zależności w konstruktorze
     public function __construct(LocationRepository $locationRepository, WeatherUtil $weatherUtil)
     {
         $this->locationRepository = $locationRepository;

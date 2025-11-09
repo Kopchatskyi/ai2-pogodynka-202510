@@ -1,0 +1,6 @@
+{% autoescape false %}
+city,country,date,celsius,fahrenheit,humidity,feels_like
+{% for m in measurements -%}
+{{ city }},{{ country }},{{ m.date|date('Y-m-d') }},{{ m.celsius|default(0) }},{{ m.fahrenheit|default(0) }},{{ m.humidity|default(0) }},{{ m.feelsLike|default(0) }}
+{% endfor %}
+{% endautoescape %}
